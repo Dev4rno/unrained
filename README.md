@@ -24,11 +24,9 @@ Unrained is a sleek and modern weather app built with Django. It allows users to
 
 -   API: OpenWeatherMap
 
--   Deployment: Railway
+-   Deployment: Vercel
 
 -   Static Files: Whitenoise
-
--   Version Control: Git
 
 ### Getting Started
 
