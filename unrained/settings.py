@@ -31,6 +31,7 @@ SECRET_KEY = 'django-insecure-!8zf28!=su$-_&^65lu2u=!d6i(3s+4zu!waov31ayrs9_7+pw
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    "unrained.vercel.app",
     "unrained-production.up.railway.app",
     "localhost:8000",
     "localhost",
@@ -133,5 +134,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://unrained-production.up.railway.app",  # Add your Railway domain
+    "https://unrained-production.up.railway.app",
+    "unrained.vercel.app",
 ]
