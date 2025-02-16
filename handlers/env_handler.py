@@ -11,6 +11,7 @@ class EnvHandler:
         self.app = {
             "api_key": self.get("API_KEY"),
             "secret_key": self.get("SECRET_KEY"),
+            "analytics_key": self.get("API_ANALYTICS_KEY"),
         }
 
     def get(self, key: str, default: Union[Any, None] = None, cast: Union[type, None] = None) -> any:
