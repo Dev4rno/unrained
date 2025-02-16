@@ -1,103 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sereno - Select a City</title>
-        <!-- FontAwesome for Icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
-        <style>
-            body {
-                font-family: "Arial", sans-serif;
-                background: linear-gradient(135deg, #1e3c72, #2a5298);
-                color: #fff;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-                text-align: center;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-                margin-bottom: 10px;
-            }
-
-            p {
-                font-size: 1.2rem;
-                margin-bottom: 30px;
-            }
-
-            .container {
-                background: rgba(255, 255, 255, 0.1);
-                border-radius: 15px;
-                padding: 30px;
-                width: 90%;
-                max-width: 500px;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(10px);
-                animation: fadeIn 1.5s ease-in-out;
-            }
-
-            ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            li {
-                margin-bottom: 10px;
-            }
-
-            button {
-                width: 100%;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background: #1e3c72;
-                color: #fff;
-                font-size: 1rem;
-                cursor: pointer;
-                transition: background 0.3s ease;
-            }
-
-            button:hover {
-                background: #2a5298;
-            }
-
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Sereno</h1>
-        <p>Select a city from the list</p>
-
-        <div class="container">
-            <ul>
-                {% for city in cities %}
-                <li>
-                    <form method="post" action="{% url 'city_selection' %}">
-                        {% csrf_token %}
-                        <input type="hidden" name="lat" value="{{ city.lat }}" />
-                        <input type="hidden" name="lon" value="{{ city.lon }}" />
-                        <button type="submit">{{ city.name }}<span class="fi fi-{{ city.country }}"></span></button>
-                    </form>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </body>
-</html>
+{% extends "weather_app/base.html" %} {% block content %}
+<body>
+    <div class="container">
+        <h1>Unrained</h1>
+        <p>Which city are we checking?</p>
+        <ul>
+            {% for city in cities %}
+            <li>
+                <form method="post" action="{% url 'city_selection' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="lat" value="{{ city.lat }}" />
+                    <input type="hidden" name="lon" value="{{ city.lon }}" />
+                    <button type="submit">
+                        {{ city.name }}<span class="fi fi-{{ city.country }}" style="margin-left: 8px"></span>
+                    </button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+{% endblock %}

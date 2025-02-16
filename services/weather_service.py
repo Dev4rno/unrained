@@ -11,7 +11,7 @@ class TemperatureUnit(Enum):
     FAHRENHEIT = auto()  # °F
     KELVIN = auto()  # K
 
-class SerenoService:
+class WeatherService:
     
     SEARCH_URL = "https://api.openweathermap.org/geo/1.0/direct"
     CITY_URL = "https://api.openweathermap.org/data/2.5/weather"
@@ -42,6 +42,7 @@ class SerenoService:
         main_data["temp_max"] = self.convert_temperature(main_data["temp_max"], TemperatureUnit.KELVIN, TemperatureUnit.CELSIUS)
         weather["sys"]["sunrise"] = dt.datetime.fromtimestamp(weather["sys"]["sunrise"]).strftime("%H:%M")
         weather["sys"]["sunset"] = dt.datetime.fromtimestamp(weather["sys"]["sunset"]).strftime("%H:%M")
+        weather["sys"]["country"] = weather["sys"]["country"].lower()
         weather["timezone"] = self.format_timezone_offset(weather["timezone"])
         weather["status"] = self.temperature_status(main_data["temp"])
         return weather
@@ -115,5 +116,5 @@ class SerenoService:
         timezone_str = f"{sign}{int(hours):02}:{int(minutes):02}"
         return timezone_str
     
-def new_sereno_service() -> SerenoService:
-    return SerenoService()
+def new_weather_service() -> WeatherService:
+    return WeatherService()

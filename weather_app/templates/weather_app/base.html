@@ -1,0 +1,107 @@
+{% comment %}
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sereno - City Search</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'weather_app/style.css' %}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+    </head>
+    <body>
+        {% block content %}
+        <!-- Default content can go here -->
+        {% endblock %}
+    </body>
+</html>
+{% endcomment %}
+
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <!-- Basic Meta Tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- Title -->
+        <title>Unrained - Real-Time Weather Updates for Your City</title>
+
+        <!-- Meta Description -->
+        <meta
+            name="description"
+            content="Get accurate, real-time weather updates for your city with Unrained. Check current conditions, forecasts, and more to stay prepared for any weather."
+        />
+
+        <!-- Keywords -->
+        <meta
+            name="keywords"
+            content="weather app, real-time weather, weather updates, weather forecast, current weather, Unrained, weather conditions, local weather, weather alerts"
+        />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="{% static 'weather_app/favicon.png' %}" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://www.yourdomain.com/" />
+
+        <!-- Open Graph Meta Tags (for Social Media Sharing) -->
+        <meta property="og:title" content="Unrained - Real-Time Weather Updates for Your City" />
+        <meta
+            property="og:description"
+            content="Get accurate, real-time weather updates for your city with Unrained. Check current conditions, forecasts, and more to stay prepared for any weather."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.yourdomain.com/" />
+        <meta property="og:image" content="{% static 'weather_app/og-image.jpg' %}" />
+        <meta property="og:site_name" content="Unrained" />
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Unrained - Real-Time Weather Updates for Your City" />
+        <meta
+            name="twitter:description"
+            content="Get accurate, real-time weather updates for your city with Unrained. Check current conditions, forecasts, and more to stay prepared for any weather."
+        />
+        <meta name="twitter:image" content="{% static 'weather_app/og-image.jpg' %}" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="{% static 'weather_app/style.css' %}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+
+        <!-- Preconnect for External Resources -->
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Unrained",
+                "url": "https://www.yourdomain.com/",
+                "description": "Get accurate, real-time weather updates for your city with Unrained. Check current conditions, forecasts, and more to stay prepared for any weather.",
+                "applicationCategory": "Weather",
+                "operatingSystem": "Web",
+                "screenshot": "{% static 'weather_app/og-image.jpg' %}",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        {% block content %}
+        <!-- Default content can go here -->
+        {% endblock %}
+    </body>
+</html>

@@ -1,9 +1,10 @@
 from django.test import TestCase
-from services.sereno_service import SerenoService, TemperatureUnit
+from unrained.services.weather_service import new_weather_service, TemperatureUnit
 
-class SerenoServiceTests(TestCase):
+class WeatherServiceTests(TestCase):
+    
     def setUp(self):
-        self.srv = SerenoService()
+        self.srv = new_weather_service()
     
     def test_convert_temperature(self):
         # K -> C

@@ -1,100 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sereno - City Search</title>
-        <!-- FontAwesome for Icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-        <style>
-            body {
-                font-family: "Arial", sans-serif;
-                background: linear-gradient(135deg, #1e3c72, #2a5298);
-                color: #fff;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-                text-align: center;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-                margin-bottom: 10px;
-            }
-
-            p {
-                font-size: 1.2rem;
-                margin-bottom: 30px;
-            }
-
-            .container {
-                background: rgba(255, 255, 255, 0.1);
-                border-radius: 15px;
-                padding: 30px;
-                width: 90%;
-                max-width: 500px;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(10px);
-                animation: fadeIn 1.5s ease-in-out;
-            }
-
-            form {
-                margin-top: 20px;
-            }
-
-            input[type="text"] {
-                width: 100%;
-                max-width: 300px;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                font-size: 1rem;
-                margin-bottom: 10px;
-            }
-
-            button {
-                width: 100%;
-                max-width: 300px;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background: #1e3c72;
-                color: #fff;
-                font-size: 1rem;
-                cursor: pointer;
-                transition: background 0.3s ease;
-            }
-
-            button:hover {
-                background: #2a5298;
-            }
-
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Sereno</h1>
-        <p>Search for a city to get the weather forecast</p>
-
-        <div class="container">
-            <form method="post">
-                {% csrf_token %}
-                <input type="text" name="city_name" placeholder="Enter city name" required />
-                <button type="submit">Search</button>
-            </form>
-        </div>
-    </body>
-</html>
+{% extends "weather_app/base.html" %} {% block content %}
+<body>
+    <div class="container">
+        <h1>Unrained</h1>
+        <p>Which city are we checking?</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="city_name" placeholder="Enter city name" required />
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+{% endblock %}
