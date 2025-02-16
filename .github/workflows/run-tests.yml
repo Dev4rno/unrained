@@ -1,0 +1,39 @@
+name: Run Tests
+
+on:
+    push:
+        branches:
+            - main # Trigger on pushes to the main branch
+    pull_request:
+        branches:
+            - main # Trigger on pull requests targeting the main branch
+
+jobs:
+    test:
+        runs-on: ubuntu-latest # Use the latest Ubuntu environment
+
+        steps:
+            # Check out the repository
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            # Set up Python
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: "3.x" # Replace with your Python version (e.g., 3.9, 3.10)
+
+            # Install dependencies
+            - name: Install dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install -r requirements.txt
+
+            # Run migrations (if needed)
+            - name: Run migrations
+              run: python manage.py migrate
+
+            # Run tests
+            - name: Run tests
+              run: |
+                  python manage.py test
