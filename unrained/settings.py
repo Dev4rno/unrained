@@ -31,7 +31,9 @@ SECRET_KEY = 'django-insecure-!8zf28!=su$-_&^65lu2u=!d6i(3s+4zu!waov31ayrs9_7+pw
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "unrained-production.up.railway.app"
+    "unrained-production.up.railway.app",
+    "localhost:8000",
+    "localhost",
 ]
 
 
