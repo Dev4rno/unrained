@@ -37,7 +37,7 @@ DEBUG = True
 #     "localhost",
 # ]
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'unrained.com']
 
 
 
@@ -139,4 +139,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = [
     "https://unrained-production.up.railway.app",
     "https://unrained.vercel.app",
+    "https://unrained.com,"
 ]
