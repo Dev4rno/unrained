@@ -1,5 +1,5 @@
 from django.test import TestCase
-from unrained.services.weather_service import new_weather_service, TemperatureUnit
+from services.weather_service import new_weather_service, TemperatureUnit
 
 class WeatherServiceTests(TestCase):
     
