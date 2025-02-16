@@ -2,4 +2,4 @@ django
 numpy
 requests
 python-dotenv
-gunicorn
+whitenoise
