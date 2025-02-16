@@ -37,7 +37,7 @@ DEBUG = True
 #     "localhost",
 # ]
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'unrained.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'www.unrained.com']
 
 
 
