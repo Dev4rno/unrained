@@ -22,6 +22,18 @@ p {
     margin-bottom: 30px;
 }
 
+/* .container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.5s ease-in-out;
+    padding-bottom: 50px;
+} */
+
 .container {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
@@ -32,6 +44,17 @@ p {
     backdrop-filter: blur(10px);
     animation: fadeIn 1.5s ease-in-out;
     padding-bottom: 50px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    overflow: hidden; /* Prevents content from overflowing */
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Optional: Add a media query for smaller screens if needed */
+@media (max-width: 600px) {
+    .container {
+        width: 95%; /* Adjust width for smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
 }
 
 ul {
