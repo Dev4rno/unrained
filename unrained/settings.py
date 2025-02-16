@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Static files (CSS, JavaScript, images)
 STATIC_URL = "/static/"  # URL prefix for static files
-STATIC_ROOT = os.path.join(BASE_DIR, "static")  
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env.app["secret_key"]
