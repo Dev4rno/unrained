@@ -11,38 +11,27 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 from pathlib import Path
+from handlers.env_handler import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-
 
 # Static files (CSS, JavaScript, images)
 STATIC_URL = "/static/"  # URL prefix for static files
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!8zf28!=su$-_&^65lu2u=!d6i(3s+4zu!waov31ayrs9_7+pw'
+SECRET_KEY = env.app["secret_key"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-# ALLOWED_HOSTS = [
-#     "unrained.vercel.app",
-#     "unrained-production.up.railway.app",
-#     "localhost:8000",
-#     "localhost",
-# ]
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'www.unrained.com']
 
-
-
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -137,7 +126,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://unrained-production.up.railway.app",
     "https://unrained.vercel.app",
     "https://unrained.com,"
 ]

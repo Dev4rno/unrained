@@ -10,6 +10,7 @@ class EnvHandler:
         """Add new variables below"""
         self.app = {
             "api_key": self.get("API_KEY"),
+            "secret_key": self.get("SECRET_KEY"),
         }
 
     def get(self, key: str, default: Union[Any, None] = None, cast: Union[type, None] = None) -> any:
