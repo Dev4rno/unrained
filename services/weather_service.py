@@ -6,7 +6,6 @@ import datetime as dt
 from typing import List, Dict
 
 class TemperatureUnit(Enum):
-    """Enum to represent temperature units."""
     CELSIUS = auto()  # °C
     FAHRENHEIT = auto()  # °F
     KELVIN = auto()  # K
@@ -54,8 +53,7 @@ class WeatherService:
         to_unit: TemperatureUnit,
     ) -> float:
         """Convert temperature from one unit to another"""
-
-        # Convert input temperature to Celsius first (for standardization)
+        # Convert to Celsius first
         if from_unit == TemperatureUnit.CELSIUS:
             celsius = temperature
         elif from_unit == TemperatureUnit.FAHRENHEIT:
@@ -64,8 +62,7 @@ class WeatherService:
             celsius = temperature - 273.15
         else:
             raise ValueError(f"Invalid 'from_unit': {from_unit}")
-
-        # Convert Celsius to the desired unit
+        # Celsius -> desired unit
         output = None
         if to_unit == TemperatureUnit.CELSIUS:
             output = celsius
@@ -75,7 +72,6 @@ class WeatherService:
             output = celsius + 273.15
         else:
             raise ValueError(f"Invalid 'to_unit': {to_unit}")
-        
         return round(output, 2)
     
     def temperature_status(self, temperature: float) -> str:
@@ -100,19 +96,11 @@ class WeatherService:
     @staticmethod
     def format_timezone_offset(timezone_offset: int) -> str:
         """Converts a timezone offset in seconds into a formatted string (e.g., +09:00)"""
-
-        # Convert seconds to a timedelta object
         offset = dt.timedelta(seconds=timezone_offset)
-
-        # Determine the sign (+ or -)
         sign = "+" if offset >= dt.timedelta(0) else "-"
-
-        # Calculate hours and minutes
         total_seconds = abs(offset.total_seconds())
         hours, remainder = divmod(total_seconds, 3600)
         minutes, _ = divmod(remainder, 60)
-
-        # Format the offset as a string (e.g., +09:00)
         timezone_str = f"{sign}{int(hours):02}:{int(minutes):02}"
         return timezone_str
     
