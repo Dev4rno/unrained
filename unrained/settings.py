@@ -135,5 +135,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
     "https://unrained-production.up.railway.app",
-    "unrained.vercel.app",
+    "https://unrained.vercel.app",
 ]
