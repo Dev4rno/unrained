@@ -30,12 +30,15 @@ SECRET_KEY = 'django-insecure-!8zf28!=su$-_&^65lu2u=!d6i(3s+4zu!waov31ayrs9_7+pw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "unrained.vercel.app",
-    "unrained-production.up.railway.app",
-    "localhost:8000",
-    "localhost",
-]
+# ALLOWED_HOSTS = [
+#     "unrained.vercel.app",
+#     "unrained-production.up.railway.app",
+#     "localhost:8000",
+#     "localhost",
+# ]
+
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+
 
 
 # Application definition
@@ -78,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'unrained.wsgi.application'
+WSGI_APPLICATION = 'unrained.wsgi.app'
 
 
 # Database
