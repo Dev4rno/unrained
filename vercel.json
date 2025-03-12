@@ -6,18 +6,10 @@
             "use": "@vercel/python"
         }
     ],
-    "rewrites": [
+    "routes": [
         {
-            "source": "/(.*)",
-            "destination": "/unrained/wsgi.py"
-        },
-        {
-            "source": "/unrained_proxy/js/script.js",
-            "destination": "https://plausible.io/js/script.js"
-        },
-        {
-            "source": "/unrained_proxy/api/event",
-            "destination": "https://plausible.io/api/event"
+            "src": "/(.*)",
+            "dest": "unrained/wsgi.py"
         }
     ]
 }
