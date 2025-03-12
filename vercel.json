@@ -1,4 +1,11 @@
 {
+    "version": 2,
+    "builds": [
+        {
+            "src": "unrained/wsgi.py",
+            "use": "@vercel/python"
+        }
+    ],
     "rewrites": [
         {
             "source": "/your-subdirectory/js/script.js",
