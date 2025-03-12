@@ -1,22 +1,11 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "unrained/wsgi.py",
-            "use": "@vercel/python"
-        }
-    ],
     "rewrites": [
         {
-            "source": "/(.*)",
-            "destination": "/unrained/wsgi.py"
-        },
-        {
-            "source": "/unrained_proxy/js/script.js",
+            "source": "/your-subdirectory/js/script.js",
             "destination": "https://plausible.io/js/script.js"
         },
         {
-            "source": "/unrained_proxy/api/event",
+            "source": "/your-subdirectory/api/event",
             "destination": "https://plausible.io/api/event"
         }
     ]
