@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'www.unrained.com', 'unrained.com']
 
 # Application definition
 INSTALLED_APPS = [
+    'plausible',
     'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'weather_app',
-    'plausible'
 ]
 
 MIDDLEWARE = [
