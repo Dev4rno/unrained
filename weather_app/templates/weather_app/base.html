@@ -58,9 +58,13 @@
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 
-        <script defer data-domain="unrained.com" src="https://plausible.io/js/script.js"></script>
+        <script
+            src="/unrained_proxy/js/script.js"
+            data-api="/unrained_proxy/api/event"
+            data-domain="unrained.com"
+        ></script>
 
-        <!-- Structured Data (JSON-LD) -->
+        <!-- Structured Data (JSON-LD)
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -78,7 +82,7 @@
                     "availability": "https://schema.org/InStock"
                 }
             }
-        </script>
+        </script> -->
     </head>
     <body>
         {% block content %}

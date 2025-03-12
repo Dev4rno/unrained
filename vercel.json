@@ -10,6 +10,14 @@
         {
             "src": "/(.*)",
             "dest": "unrained/wsgi.py"
+        },
+        {
+            "src": "/unrained_proxy/js/script.js",
+            "dest": "https://plausible.io/js/script.js"
+        },
+        {
+            "src": "/unrained_proxy/api/event",
+            "dest": "https://plausible.io/api/event"
         }
     ]
 }
