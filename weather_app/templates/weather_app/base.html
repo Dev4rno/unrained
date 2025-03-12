@@ -83,6 +83,155 @@
     <body>
         {% block content %}
         <!-- Default content can go here -->
-        {% endblock %} {% include "./footer.html"%}
+        {% endblock %}
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <!-- Logo and company info -->
+
+                    <!-- PRODUCT LINKS -->
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Products</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://skyflow.me?utm_source=unrained"
+                                    class="footer-link"
+                                    >Bluesky Observatory</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://pwplz.com?utm_source=unrained"
+                                    class="footer-link"
+                                    >Free Passwords</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://punpal.net?utm_source=unrained"
+                                    class="footer-link"
+                                    >Joke Battles</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://jumblr.fun?utm_source=unrained"
+                                    class="footer-link"
+                                    >Reading Challenge</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- BLOG LINKS -->
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Blog</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://devarno.com/blog/password-please?utm_source=unrained"
+                                    class="footer-link"
+                                    >Passwords | FastAPI</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://devarno.com/blog/dje-skyflow-1?utm_source=unrained"
+                                    class="footer-link"
+                                    >Networking | FastAPI</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://devarno.com/blog/jokes-votes-launch?utm_source=unrained"
+                                    class="footer-link"
+                                    >Jokes | Next.js</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://devarno.com/blog/sicilian-bytes?utm_source=unrained"
+                                    class="footer-link"
+                                    >Code | Cooking</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- SOCIAL LINKS -->
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Social</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://bsky.app/profile/devarno.com"
+                                    class="footer-link"
+                                    >Bluesky</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://github.com/Dev4rno"
+                                    class="footer-link"
+                                    >GitHub</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://www.reddit.com/user/Dev4rno/"
+                                    class="footer-link"
+                                    target="_blank"
+                                    >Reddit</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://ko-fi.com/dev4rno"
+                                    class="footer-link"
+                                    target="_blank"
+                                    >Ko-Fi</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-row">
+                    <div class="footer-column footer-logo-column">
+                        <a href="https://devarno.com" class="footer-logo-link" target="_blank" title="Visit DevArno">
+                            <img src="{% static 'weather_app/devarno.png' %}" alt="DevArno Logo" class="footer-logo" />
+                        </a>
+                        <p class="footer-tagline">Build the solution</p>
+                        <p class="footer-copyright">© {{ current_year }} DevArno. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
