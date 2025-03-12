@@ -4,4 +4,3 @@ requests
 python-dotenv
 whitenoise
 api-analytics[django]
-django-plausible

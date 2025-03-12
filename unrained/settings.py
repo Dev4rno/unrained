@@ -30,7 +30,6 @@ ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'www.unrained.com', 'unrained.com']
 
 # Application definition
 INSTALLED_APPS = [
-    'plausible',
     'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
