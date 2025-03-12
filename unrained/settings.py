@@ -28,7 +28,7 @@ SECRET_KEY = env.app["secret_key"]
 ANALYTICS_API_KEY = env.app['analytics_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'www.unrained.com', 'unrained.com']
 
