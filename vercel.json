@@ -8,6 +8,14 @@
     ],
     "routes": [
         {
+            "src": "/unrained_plausible/js/script.js",
+            "dest": "https://plausible.io/js/script.js"
+        },
+        {
+            "src": "/unrained_plausible/api/event",
+            "dest": "https://plausible.io/api/event"
+        },
+        {
             "src": "/(.*)",
             "dest": "/unrained/wsgi.py"
         }

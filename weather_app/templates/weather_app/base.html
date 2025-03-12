@@ -58,7 +58,12 @@
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 
-        <script defer data-domain="unrained.com" src="{% static 'js/plausible.js' %}"></script>
+        <script
+            defer
+            src="/unrained_plausible/js/script.js"
+            data-api="/unrained_plausible/api/event"
+            data-domain="unrained.com"
+        ></script>
 
         <!-- Structured Data (JSON-LD)
         <script type="application/ld+json">
