@@ -8,11 +8,15 @@
     ],
     "rewrites": [
         {
-            "source": "/your-subdirectory/js/script.js",
+            "source": "/(.*)",
+            "destination": "/unrained/wsgi.py"
+        },
+        {
+            "source": "/unrained_proxy/js/script.js",
             "destination": "https://plausible.io/js/script.js"
         },
         {
-            "source": "/your-subdirectory/api/event",
+            "source": "/unrained_proxy/api/event",
             "destination": "https://plausible.io/api/event"
         }
     ]
