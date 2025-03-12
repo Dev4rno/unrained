@@ -58,7 +58,11 @@
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 
-        {% load plausible %} {% plausible site_domain="unrained.com" %}
+        <script
+            src="/unrained_proxy/js/script.js"
+            data-api="/unrained_proxy/api/event"
+            data-domain="yourdomain.com"
+        ></script>
 
         <!-- Structured Data (JSON-LD) -->
         <script type="application/ld+json">
